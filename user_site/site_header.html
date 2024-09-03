@@ -1,0 +1,26 @@
+<header class="site-header d-flex justify-content-between align-items-center px-3 py-2">
+    <!-- ロゴ -->
+    <a href="site_dashboard.html">
+    <img src="../images/service_logo.webp" alt="Service Logo" class="site-logo">
+    </a>
+    <!-- 通知アイコンとハンバーガーメニューを右側に配置 -->
+    <div class="d-flex align-items-center">
+        <!-- 通知アイコン -->
+        <div class="position-relative mx-2">
+            <a href="site_notifications.html" class="text-white">
+                <i class="bi bi-bell site-notification-icon"></i>
+                <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">3</span>
+            </a>
+        </div>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="dropdown">
+            <i class="bi bi-list site-menu-icon" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="site_profile.html">プロフィール</a></li>
+                <li><a class="dropdown-item" href="site_settings.html">設定</a></li>
+                <li><a class="dropdown-item" href="site_help.html">ヘルプ</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

@@ -131,3 +131,134 @@ header nav ul li a:hover {
 .user-site {
     /* ユーザーサイト固有のスタイル */
 }
+/* =====================================================================
+   User site AD page
+===================================================================== */
+.top.container {
+    background-image: url('../images/top_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* 白いテキストで見やすく */
+}
+
+.top h1 {
+    color: white; /* h1を白に設定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 視認性を高めるために影を追加 */
+}
+
+.top p {
+    color: white; /* pを白に設定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 視認性を高めるために影を追加 */
+}
+
+/* =====================================================================
+   User site header page
+===================================================================== */
+.site-header {
+    background-color: var(--main-color); /* メインカラーを背景色に設定 */
+    color: white; /* テキストカラーを白に設定 */
+}
+
+.site-logo {
+    height: 40px; /* ロゴの高さ */
+    object-fit: contain;
+}
+
+.site-menu-icon {
+    font-size: 1.5rem; /* ハンバーガーメニューアイコンのサイズ */
+    cursor: pointer;
+}
+
+.site-notification-icon {
+    font-size: 1.5rem; /* 通知アイコンのサイズ */
+    position: relative;
+}
+
+.badge {
+    font-size: 0.75rem; /* バッジのフォントサイズ */
+    padding: 0.4em 0.6em; /* バッジのパディング */
+}
+
+/* =====================================================================
+   User site footer page
+===================================================================== */
+.site-footer {
+    background-color: var(--main-color); /* フッターの背景色をメインカラーに設定 */
+    color: white; /* アイコンの色を白に設定 */
+}
+
+.site-footer a {
+    color: white; /* リンクの色を白に設定 */
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--sub-color); /* ホバー時のリンク色をサブカラーに設定 */
+}
+
+.site-footer-icon {
+    font-size: 1.5rem; /* フッターアイコンのサイズ */
+    position: relative;
+}
+
+.site-footer .badge {
+    font-size: 0.75rem; /* バッジのフォントサイズ */
+    padding: 0.4em 0.6em; /* バッジのパディング */
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--sub-color); /* バッジの背景色をサブカラーに設定 */
+    color: white;
+}
+
+/* =====================================================================
+   User site favorites page
+===================================================================== */
+.favorite-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 20px;
+    height: 600px; /* コンテンツエリアの高さを固定 */
+}
+
+.favorite-card {
+    width: 280px;
+    height: 500px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background-color: #f8f9fa;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.message-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+}
+
+.badge-compatibility {
+    position: absolute;
+    top:  53px;
+    left: 20px;
+    font-size: 0.7rem;
+}
+
+.badge-heart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+}

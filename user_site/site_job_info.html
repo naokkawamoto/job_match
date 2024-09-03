@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Detail</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Optional custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <!-- ヘッダー読み込み -->
+    <div id="header-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <div class="container" style="max-width: 400px; margin-top: 20px; margin-bottom: 5px;">
+        <!-- カード全体を囲む -->
+        <div class="card shadow-sm">
+            <div class="p-3">
+                <!-- ハートマーク、相性度バッジ、会社名 -->
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-heart-fill text-danger me-2"></i>
+                    <h4 class="mb-0">求人タイトル</h4>
+                    <span class="badge bg-success ms-2">相性度80%</span>
+                </div>
+
+                <!-- タブメニュー -->
+                <ul class="nav nav-tabs mb-3" id="companyDetailTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail" type="button" role="tab" aria-controls="detail" aria-selected="true">会社詳細</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="jobs-tab" data-bs-toggle="tab" data-bs-target="#jobs" type="button" role="tab" aria-controls="jobs" aria-selected="false">求人情報</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat" type="button" role="tab" aria-controls="chat" aria-selected="false">
+                            チャット <span class="badge bg-danger">2</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- タブコンテンツ -->
+                <div class="tab-content" id="companyDetailTabsContent">
+                    <!-- 会社詳細タブ -->
+                    <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                        <h4 class="mb-0">COMPANY 1</h4>
+                        <img src="../images/company.jpg" class="card-img-top mb-3" alt="Company Image">
+                        <div class="d-flex justify-content-between mb-3">
+                            <!-- サブ画像5個 -->
+                            <img src="../images/top_banner.jpg" class="img-thumbnail" alt="Sub Image 1" style="width: 60px; height: 60px;">
+                            <img src="../images/top_banner.jpg" class="img-thumbnail" alt="Sub Image 2" style="width: 60px; height: 60px;">
+                            <img src="../images/top_banner.jpg" class="img-thumbnail" alt="Sub Image 3" style="width: 60px; height: 60px;">
+                            <img src="../images/top_banner.jpg" class="img-thumbnail" alt="Sub Image 4" style="width: 60px; height: 60px;">
+                            <img src="../images/top_banner.jpg" class="img-thumbnail" alt="Sub Image 5" style="width: 60px; height: 60px;">
+                        </div>
+                        <p class="card-text">ここには会社の説明が入ります。ここには会社の説明が入ります。ここには会社の説明が入ります。</p>
+                    </div>
+
+                    <!-- 求人情報タブ -->
+<div class="tab-pane fade" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">
+    <h5 class="mt-3">求人タイトル1</h5>
+    <!-- 求人情報をカードで表示 -->
+    <div class="card mb-3">
+        <div class="card-body bg-light">
+            <h5 class="card-title">求人タイトル1</h5>
+            <p class="card-text">ここには求人情報が入ります。ここには求人情報が入ります。ここには求人情報が入ります。ここには求人情報が入ります。ここには求人情報が入ります。</p>
+        </div>
+    </div>
+
+    <!-- この会社の別の求人 -->
+    <h5 class="mt-4">この会社の別の求人</h5>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">求人タイトル2</h5>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">求人タイトル3</h5>
+        </div>
+    </div>
+</div>
+
+
+                    <!-- チャットタブ -->
+                    <div class="tab-pane fade" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+                        <!-- メッセージ入力フォーム -->
+<form class="d-flex mb-3">
+    <input type="text" class="form-control me-2" placeholder="メッセージを入力">
+    <button type="submit" class="btn btn-primary">送信</button>
+</form>
+
+<!-- チャットメッセージ（最新のメッセージが上） -->
+<div class="d-flex flex-column-reverse">
+    <!-- 会社のメッセージ -->
+    <div class="p-2 bg-primary text-white align-self-end rounded mb-2" style="max-width: 75%;">
+        <p class="mb-0">会社1: ありがとうございます。</p>
+        <span class="text-white-50 small">12:45 PM</span>
+    </div>
+    <!-- ユーザーのメッセージ -->
+    <div class="p-2 bg-light align-self-start rounded mb-2" style="max-width: 75%;">
+        <p class="mb-0">あなた: こちらこそ、よろしくお願いします。</p>
+        <span class="text-muted small">12:40 PM</span>
+    </div>
+    <!-- 会社のメッセージ -->
+    <div class="p-2 bg-primary text-white align-self-end rounded mb-2" style="max-width: 75%;">
+        <p class="mb-0">会社1: こんにちは、よろしくお願いします。</p>
+        <span class="text-white-50 small">12:35 PM</span>
+    </div>
+    <!-- ユーザーのメッセージ -->
+    <div class="p-2 bg-light align-self-start rounded mb-2" style="max-width: 75%;">
+        <p class="mb-0">あなた: こんにちは、会社1です。</p>
+        <span class="text-muted small">12:30 PM</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター読み込み -->
+    <div id="footer-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../style.js"></script>
+
+    <!-- JavaScript to load header and footer -->
+    <script>
+        // site_header.html を読み込んで挿入
+        fetch('site_header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // site_footer.html を読み込んで挿入
+        fetch('site_footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

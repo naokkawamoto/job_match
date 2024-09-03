@@ -143,43 +143,55 @@ document.addEventListener('DOMContentLoaded', function () {
     const questions = [
         {
             id: 'question1',
-            question: '1. お住まい（都道府県）',
+            question: '1. 勤務場所（都道府県）',
             type: 'select',
             options: ['北海道', '東京都', '大阪府', '福岡県', '沖縄県'],
         },
         {
             id: 'question2',
-            question: '2. 好きな映画のジャンル',
+            question: '2. 雇用形態',
             type: 'checkbox',
-            options: ['アクション', 'コメディ', 'ドラマ', 'ホラー', 'SF', 'アニメ'],
+            options: ['正社員', 'パート、アルバイト', '希望なし'],
         },
         {
             id: 'question3',
-            question: '3. 仕事',
+            question: '3. 勤務時間',
             type: 'radio',
-            options: ['会社員', '自営業', '学生', '無職', 'その他'],
+            options: ['８時間残業なし', '８時間残業あり', '４時間程度', '２時間程度'],
         },
         {
             id: 'question4',
-            question: '4. 子供の人数',
-            type: 'text',
-            placeholder: '例: 2人',
+            question: '4. １週間勤務日数',
+            type: 'radio',
+            options: ['5日以下', '4日以下', '3日以下', '2日以下', '1日'],
         },
         {
             id: 'question5',
-            question: '5. 未婚既婚',
-            type: 'radio',
-            options: ['未婚', '既婚'],
+            question: '5. こだわり',
+            type: 'checkbox',
+            options: ['駅近', '福利厚生充実', '保育室', '残業なし'],
         },
         {
             id: 'question6',
-            question: '6. 年代',
-            type: 'select',
-            options: ['10代', '20代', '30代', '40代', '50代', '60代以上'],
+            question: '6. 年収',
+            type: 'checkbox',
+            options: ['100万円未満', '200万円以上', '300万円以上', '400万円以上', '500万円以上', '600万円以上', '700万円以上', '800万円以上', '900万円以上', '1000万円以上'],
         },
         {
             id: 'question7',
-            question: '7. 困っていること',
+            question: '7. 時給',
+            type: 'checkbox',
+            options: ['1100円以上', '1300円以上', '1500円以上', '2000円以上', '2500円以上'],
+        },
+        {
+            id: 'question8',
+            question: '8. 職場環境で重要視する点',
+            type: 'checkbox',
+            options: ['清潔さ', '静かさ', '自然光', 'リモートワーク可', 'チームの雰囲気'],
+        },
+        {
+            id: 'question9',
+            question: '9. そのほか希望があればお書きください',
             type: 'textarea',
             placeholder: '自由にお書きください',
         },
@@ -195,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         confirmationHtml += `
             <button class="btn btn-secondary" id="back-button">戻る</button>
-            <a href="site_signup_confirm.html" class="btn btn-success">登録する</a>
+            <a href="site_signup.html" class="btn btn-success">登録する</a>
         `;
         questionContainer.innerHTML = confirmationHtml;
 

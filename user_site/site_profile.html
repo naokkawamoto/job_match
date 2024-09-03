@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company profile</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Optional custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <!-- ヘッダー読み込み -->
+    <div id="header-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <div class="container" style="max-width: 400px; margin-top: 20px; margin-bottom: 5px;">
+        <!-- カード全体を囲む -->
+        <div class="card shadow-sm">
+            <div class="p-3">
+                    <h4 class="mb-0">PROFILE</h4>
+                    <span class="badge bg-success ms-2">完成度80%</span>
+                </div>
+
+                <!-- タブメニュー -->
+                <ul class="nav nav-tabs mb-3" id="profileTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">BASIC PROFILE</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="additional-tab" data-bs-toggle="tab" data-bs-target="#additional" type="button" role="tab" aria-controls="additional" aria-selected="false">ADDITIONAL</button>
+                    </li>
+                </ul>
+
+                <!-- タブコンテンツ -->
+                <div class="tab-content" id="profileTabsContent">
+                    <!-- BASIC PROFILE タブ -->
+                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h4 class="mb-3">COMPANY 1</h4>
+                        <div class="mb-3">
+                            <label class="form-label">名前</label>
+                            <input type="text" class="form-control" value="山田 太郎">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">メールアドレス</label>
+                            <input type="email" class="form-control" value="yamada@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">パスワード</label>
+                            <input type="password" class="form-control" value="password123">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">年齢</label>
+                            <input type="number" class="form-control" value="35">
+                        </div>
+
+                        <!-- 質問結果を表示 -->
+                        <h5 class="mt-4">勤務条件</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">1. 勤務場所: 東京都</li>
+                            <li class="list-group-item">2. 雇用形態: 正社員</li>
+                            <li class="list-group-item">3. 勤務時間: ８時間残業なし</li>
+                            <li class="list-group-item">4. １週間勤務日数: 5日以下</li>
+                            <li class="list-group-item">5. こだわり: 駅近, 福利厚生充実</li>
+                            <li class="list-group-item">6. 年収: 500万円以上</li>
+                            <li class="list-group-item">7. 時給: 1300円以上</li>
+                            <li class="list-group-item">8. 職場環境で重要視する点: 清潔さ, 静かさ</li>
+                            <li class="list-group-item">9. その他希望: リモートワーク可</li>
+                        </ul>
+                    </div>
+
+                    <!-- ADDITIONAL タブ -->
+                    <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+                        <div class="mb-3">
+                            <h5 class="text-center">推奨プロフィール完成度: 70%</h5>
+                        </div>
+
+                        <!-- 追加情報の入力フォーム -->
+                        <div class="mb-3">
+                            <label class="form-label">現職業</label>
+                            <input type="text" class="form-control" value="システムエンジニア">
+                            <button class="btn btn-primary mt-2">保存</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">最終学歴</label>
+                            <input type="text" class="form-control" value="東京大学工学部">
+                            <button class="btn btn-primary mt-2">保存</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">最終の学校</label>
+                            <input type="text" class="form-control" value="東京大学">
+                            <button class="btn btn-primary mt-2">保存</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">主な資格</label>
+                            <input type="text" class="form-control" value="情報処理技術者">
+                            <button class="btn btn-primary mt-2">保存</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">経験年数</label>
+                            <input type="number" class="form-control" value="10">
+                            <button class="btn btn-primary mt-2">保存</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター読み込み -->
+    <div id="footer-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../style.js"></script>
+
+    <!-- JavaScript to load header and footer -->
+    <script>
+        // site_header.html を読み込んで挿入
+        fetch('site_header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // site_footer.html を読み込んで挿入
+        fetch('site_footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
