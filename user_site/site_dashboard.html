@@ -7,118 +7,187 @@
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-
-    <!-- Optional custom CSS -->
     <link rel="stylesheet" href="../style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
-    
+<body>
+
     <!-- ヘッダー読み込み -->
     <div id="header-placeholder" class="mx-auto" style="max-width: 400px;"></div>
 
-    <div class="container" style="max-width: 400px; margin-top: 20px; margin-bottom: 5px;">
-        <!-- カード全体を囲む -->
-        <div class="card shadow-sm">
-            
-            <!-- スライドバナー -->
-            <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="container" style="max-width: 400px; margin-top: 20px;">
+        <!-- 大きなカード全体 -->
+        <div class="card shadow-sm" style="height: 780px; overflow-y: auto;">
+            <!-- タイトルと求人掲載数 -->
+            <div class="p-3">
+                <p class="text-center text-muted" style="font-size: 0.75rem;">あなたのプロフィールからAIがレコメンド</p>
+                <!-- AIで求人を探すボタン -->
+                <div class="d-grid gap-2">
+                    <a href="site_search_result.html" class="btn btn-info btn-lg text-center mb-2">
+                        <i class="bi bi-airplane-engines me-2"></i> AIで求人を探す
+                    </a>
+                    <!-- AIレコメンド説明 -->
+        <p class="text-center text-muted" style="font-size: 0.75rem;">現在の求人掲載数: 350件</p>
+
+        </div>
+
+                <!-- 検索ボックス -->
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="btn btn-primary" type="button">検索</button>
+                </div>
+
+                <!-- 詳細検索リンク -->
+                <a href="site_search.html" class="d-block text-end small text-muted">詳細検索</a>
+            </div>
+
+            <!-- 新着求人エリア -->
+            <h5 class="ml-3" style="font-size: 1rem; text-align: left; margin-left: 1rem;">新着求人</h5>
+            <div id="carouselScout" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/400x150" class="d-block w-100" alt="Banner 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/400x150" class="d-block w-100" alt="Banner 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/400x150" class="d-block w-100" alt="Banner 3">
+                        <div class="d-flex justify-content-center">
+                            <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 1">
+                                <div class="card-body p-1">
+                                    <h6 class="card-title small text-center">新着求人 1</h6>
+                                </div>
+                            </a>
+                            <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 2">
+                                <div class="card-body p-1">
+                                    <h6 class="card-title small text-center">新着求人 2</h6>
+                                </div>
+                            </a>
+                            <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 3">
+                                <div class="card-body p-1">
+                                    <h6 class="card-title small text-center">新着求人 3</h6>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h3 class="text-center mt-3">SERVICE TOP</h3>
-
-            <!-- 検索ボックス -->
-            <div class="p-3">
-                <input type="text" class="form-control" placeholder="Search...">
+            <!-- SCOUT Section -->
+            <div class="mt-4">
+                <div class="card-body py-2 d-flex align-items-center">
+                    <i class="bi bi-send me-2"></i> <!-- SCOUTアイコン -->
+                    <span class="badge rounded-pill bg-success me-2">2</span> <!-- バッジ -->
+                    <p class="mb-0 small">スカウト</p> <!-- タイトルと説明文 -->
+                </div>
+                
+                <div id="carouselScout" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-start">
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 1">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">スカウト 1</h6>
+                                    </div>
+                                </a>
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 2">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">スカウト 2</h6>
+                                    </div>
+                                </a>
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 3">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">スカウト 3</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- おすすめコンテンツカルーセル -->
-            <div class="card-body">
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- LIKED Section -->
+            <div class="mt-4">
+                <div class="card-body py-2 d-flex align-items-center">
+                    <i class="bi bi-heart-fill me-2"></i> <!-- SCOUTアイコン -->
+                    <span class="badge rounded-pill bg-info me-2">2</span> <!-- バッジ -->
+                    <p class="mb-0 small">LIKED</p> <!-- タイトルと説明文 -->
+                </div>
+                
+
+                <div id="carouselScout" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 1">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 1</h6>
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 1">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">LIKED 1</h6>
                                     </div>
-                                </div>
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 2">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 2</h6>
+                                </a>
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 2">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">LIKED 2</h6>
                                     </div>
-                                </div>
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 3">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 3</h6>
+                                </a>
+                                <a href="site_job_info.html" class="card mx-2" style="width: 8rem;">
+                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="New Job 3">
+                                    <div class="card-body p-1">
+                                        <h6 class="card-title small text-center">LIKED 3</h6>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center">
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 4">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 4</h6>
-                                    </div>
-                                </div>
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 5">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 5</h6>
-                                    </div>
-                                </div>
-                                <div class="card mx-2" style="width: 10rem;">
-                                    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Content 6">
-                                    <div class="card-body">
-                                        <h6 class="card-title">コンテンツ 6</h6>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+            
+
+            
+                <h3 class="text-center mt-3">お知らせ</h3>
+
+                <!-- 縦にスクロールするコンテンツ -->
+                <div class="card-body" style="height: 600px; overflow-y: auto;">
+                    <!-- 未読通知 -->
+                    <div class="alert alert-primary" role="alert">
+                        <a href="site_job_info.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-heart-fill"></i> LIKEがつきました。<span class="text-muted small">10:30 AM</span>
+                        </a>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                        <a href="site_company_detail.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-send"></i> スカウトがありました。<span class="text-muted small">10:30 AM</span>
+                        </a>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                        <a href="site_job_info.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-chat-dots"></i> COMPANY1からメッセージが届きました。<span class="text-muted small">9:45 AM</span>
+                        </a>
+                    </div>
+                    <!-- 既読通知 -->
+                    <div class="alert alert-light" role="alert">
+                        <a href="#" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-info-circle"></i> 運営からのメッセージが届きました。<span class="text-muted small">昨日</span>
+                        </a>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        <a href="site_favorite.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-briefcase-fill"></i> あなたにマッチした新着求人があります。<span class="text-muted small">8:00 AM</span>
+                        </a>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        <a href="site_chat.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-chat-dots"></i> COMPANY2からメッセージが届きました。<span class="text-muted small">7:30 AM</span>
+                        </a>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                        <a href="site_chat.html" class="stretched-link text-dark text-decoration-none">
+                            <i class="bi bi-chat-dots"></i> COMPANY1からメッセージが届きました。<span class="text-muted small">7:30 AM</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- 縦にスクロールするコンテンツ -->
-            <div id="navbar-example2" class="scrollspy-example card-body" style="max-height: 200px; overflow-y: auto;">
-                <h5 id="item-1">Item 1</h5>
-                <p>...</p>
-                <h5 id="item-2">Item 2</h5>
-                <p>...</p>
-                <h5 id="item-3">Item 3</h5>
-                <p>...</p>
-                <h5 id="item-4">Item 4</h5>
-                <p>...</p>
-                <h5 id="item-5">Item 5</h5>
-                <p>...</p>
-            </div>
-            <a href="../index.html" class="btn btn-link mt-4">Demo Entry</a>
         </div>
     </div>
 
@@ -133,25 +202,16 @@
 
     <!-- JavaScript to load header and footer -->
     <script>
-        // user_header.html を読み込んで挿入
-        fetch('site_header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-
-        // user_footer.html を読み込んで挿入
-        fetch('site_footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-        
-            // カスタム設定を適用
-        document.addEventListener('DOMContentLoaded', () => {
-            applyCustomSettings();
+        // site_header.html を読み込んで挿入
+        fetch('site_header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
         });
 
+        // site_footer.html を読み込んで挿入
+        fetch('site_footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
     </script>
+
 </body>
 </html>

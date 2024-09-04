@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- ヘッダー読み込み -->
+    <div id="header-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <div class="container" style="max-width: 400px; margin-top: 20px;">
+        <!-- カード全体を囲む -->
+        <div class="container card shadow-sm mt-3 mb-3">
+        <h3 class="text-center mt-3">Search Results</h3>
+        
+        <!-- Selected Filters -->
+        <p class="small text-muted">勤務場所: 東京都 | 雇用形態: 正社員 | 勤務時間: ８時間残業なし</p>
+
+            <!-- Job Cards -->
+            <div class="search-results" style="height: 600px; overflow-y: auto;">
+                <!-- Job 1 -->
+                <div class="card job-card shadow-sm mb-3" data-job-id="1">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <span>求人タイトル 1</span>
+                            <i class="bi bi-heart" id="heart-1" onclick="toggleFavorite('heart-1')"></i>
+                        </h5>
+                        <span class="badge bg-warning badge-compatibility">相性度95%</span>
+                        <p class="small text-end">COMPANY 1</p>
+                        <img src="../images/company.jpg" class="card-img-top mb-2" alt="Company 1">
+                        <p class="card-text">ここには求人の説明が入ります。ここには求人の説明が入ります。ここには求人の説明が入ります。</p>
+                        <a href="site_job_info.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="card job-card shadow-sm mb-3" data-job-id="2">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <span>求人タイトル 2</span>
+                            <i class="bi bi-heart" id="heart-2" onclick="toggleFavorite('heart-2')"></i>
+                        </h5>
+                        <span class="badge bg-success badge-compatibility">相性度92%</span>
+                        <p class="small text-end">COMPANY 2</p>
+                        <img src="../images/company.jpg" class="card-img-top mb-2" alt="Company 2">
+                        <p class="card-text">ここには求人の説明が入ります。ここには求人の説明が入ります。ここには求人の説明が入ります。</p>
+                        <a href="site_site_job_info.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="card job-card shadow-sm mb-3" data-job-id="3">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <span>求人タイトル 3</span>
+                            <i class="bi bi-heart" id="heart-3" onclick="toggleFavorite('heart-3')"></i>
+                        </h5>
+                        <span class="badge bg-success badge-compatibility">相性度90%</span>
+                        <p class="small text-end">COMPANY 3</p>
+                        <img src="../images/company.jpg" class="card-img-top mb-2" alt="Company 3">
+                        <p class="card-text">ここには求人の説明が入ります。ここには求人の説明が入ります。ここには求人の説明が入ります。</p>
+                        <a href="site_job_info.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="card job-card shadow-sm mb-3" data-job-id="4">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <span>求人タイトル 4</span>
+                            <i class="bi bi-heart" id="heart-4" onclick="toggleFavorite('heart-4')"></i>
+                        </h5>
+                        <span class="badge bg-info badge-compatibility">相性度88%</span>
+                        <p class="small text-end">COMPANY 4</p>
+                        <img src="../images/company.jpg" class="card-img-top mb-2" alt="Company 4">
+                        <p class="card-text">ここには求人の説明が入ります。ここには求人の説明が入ります。ここには求人の説明が入ります。</p>
+                        <a href="site_job_info.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <!-- Job 5 -->
+                <div class="card job-card shadow-sm mb-3" data-job-id="5">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <span>求人タイトル 5</span>
+                            <i class="bi bi-heart" id="heart-5" onclick="toggleFavorite('heart-5')"></i>
+                        </h5>
+                        <span class="badge bg-info badge-compatibility">相性度85%</span>
+                        <p class="small text-end">COMPANY 5</p>
+                        <img src="../images/company.jpg" class="card-img-top mb-2" alt="Company 5">
+                        <p class="card-text">ここには求人の説明が入ります。ここには求人の説明が入ります。ここには求人の説明が入ります。</p>
+                        <a href="site_job_info.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター読み込み -->
+    <div id="footer-placeholder" class="mx-auto" style="max-width: 400px;"></div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../style.js"></script>
+
+    <script>
+        // site_header.html を読み込んで挿入
+        fetch('site_header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+        // site_footer.html を読み込んで挿入
+        fetch('site_footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+        // Toggle heart icon between bi-heart and bi-heart-half
+        function toggleFavorite(id) {
+    const heartIcon = document.getElementById(id);
+    heartIcon.classList.toggle('bi-heart');
+    heartIcon.classList.toggle('bi-heart-half');
+}
+    </script>
+</body>
+</html>

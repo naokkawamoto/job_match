@@ -174,7 +174,14 @@ header nav ul li a:hover {
     font-size: 1.5rem; /* ハンバーガーメニューアイコンのサイズ */
     cursor: pointer;
 }
-
+.site-search-icon {
+    font-size: 1.5rem; /* 通知アイコンのサイズ */
+    position: relative;
+}
+.site-calendar-icon {
+    font-size: 1.5rem; /* 通知アイコンのサイズ */
+    position: relative;
+}
 .site-notification-icon {
     font-size: 1.5rem; /* 通知アイコンのサイズ */
     position: relative;
@@ -233,7 +240,7 @@ header nav ul li a:hover {
 
 .favorite-card {
     width: 280px;
-    height: 500px;
+    height: 350px;
     flex: 0 0 auto;
     scroll-snap-align: center;
     background-color: #f8f9fa;
